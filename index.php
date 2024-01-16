@@ -16,3 +16,14 @@ class Product
     $this->dettagli = $_dettagli;
   }
 }
+
+class Food extends Product
+{
+  public $gluten_free;
+
+  function __construct($_item, $_prezzo, $_immagine, $_dettagli, $gluten_free)
+  {
+    parent::__construct($_item, $_prezzo, $_immagine, $_dettagli);
+    $this->gluten_free = $gluten_free;
+  }
+}
