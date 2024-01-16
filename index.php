@@ -27,3 +27,19 @@ class Food extends Product
     $this->gluten_free = $gluten_free;
   }
 }
+
+class Toys extends Product
+{
+  public function __construct($_item, $_prezzo, $_immagine, $_dettagli)
+  {
+    parent::__construct($_item, $_prezzo, $_immagine, $_dettagli);
+  }
+}
+
+class Kennels extends Product
+{
+  public function __construct($_item, $_prezzo, $_immagine, $_dettagli)
+  {
+    parent::__construct($_item, $_prezzo, $_immagine, $_dettagli);
+  }
+}
