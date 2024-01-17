@@ -62,7 +62,7 @@ $food_cat = new Food(
   7.99,
   'https://arcaplanet.vtexassets.com/arquivos/ids/270578/brekkies-cat-bonta-benessere-urinary-care-1-5-kg.jpg?v=637849996178730000',
   'Dettagli cibo gatto',
-  $cani
+  $gatti
 );
 $food_cat->set_is_gluten_free('Sì');
 
@@ -93,10 +93,10 @@ $products = [$food_dog, $toy_cat, $kennel_cat, $toy_dog, $kennel_dog, $food_cat]
   <!-- Custom CSS -->
 </head>
 
-<body>
+<body class="pb-3">
   <!-- Header -->
   <header>
-    <h1 class="text-center">Animal Shop</h1>
+    <h1 class="text-center p-5">Animal Shop</h1>
   </header>
   <!-- Main -->
   <main>
@@ -116,6 +116,7 @@ $products = [$food_dog, $toy_cat, $kennel_cat, $toy_dog, $kennel_dog, $food_cat]
                     echo $product->get_category()->get_icon();
                     ?>
                   </p>
+                  <strong>Prezzo: <?php echo $product->get_prezzo(); ?> €</strong>
                 </div>
                 <p class="card-text"><?php echo $product->get_dettagli(); ?></p>
               </div>
