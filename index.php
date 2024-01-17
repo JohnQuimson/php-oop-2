@@ -14,6 +14,7 @@ $gatti = new Category('Gatti', '<i class="fa-solid fa-cat"></i>');
 
 // Prodotti
 $food_dog = new Food(
+  283,
   'Monge Medium Adult Ricco di Pollo',
   14.99,
   'https://arcaplanet.vtexassets.com/arquivos/ids/243743/monge-cane-adult-medium.jpg?v=637455010024930000',
@@ -23,6 +24,7 @@ $food_dog = new Food(
 $food_dog->set_expiration_date('13/05/2024');
 
 $toy_cat = new Toys(
+  230,
   'Gioco Pesce Guizzante per Gatto',
   9.90,
   'https://arcaplanet.vtexassets.com/arquivos/ids/264784/trixie-pesce-guizzante-gioco-gatto.jpg?v=637722153844830000',
@@ -32,6 +34,7 @@ $toy_cat = new Toys(
 $toy_cat->set_material('Piume');
 
 $kennel_cat = new Kennels(
+  923,
   'Amaca da fissare al muro',
   32.90,
   'https://arcaplanet.vtexassets.com/arquivos/ids/265702/PHO_PRO_CAT_CLIP_49920-01-49923-1_-SALL_-APRKU_-V1.jpg?v=637737941822300000',
@@ -40,6 +43,7 @@ $kennel_cat = new Kennels(
 );
 
 $toy_dog = new Toys(
+  281,
   'Gioco per Cane in Stoffa Peluche con Squittio',
   5.90,
   'https://arcaplanet.vtexassets.com/arquivos/ids/218063/https---www.arcaplanet.it-media-catalog-product--t-r-trixie-cane-in-tessuto-peluche-tric78.jpg?v=637454594866330000',
@@ -50,6 +54,7 @@ $toy_dog->set_material('Stoffa');
 
 
 $kennel_dog = new Kennels(
+  563,
   'Cuscino Prestige Ecopelle Chocolate',
   40.99,
   'https://arcaplanet.vtexassets.com/arquivos/ids/275819/Luna-Teo-Knightsbridge-Chocolate-Mattress-M.jpg?v=638007348625530000',
@@ -58,6 +63,7 @@ $kennel_dog = new Kennels(
 );
 
 $food_cat = new Food(
+  125,
   'Brekkies Cat Bontà e Benessere Urinary Care',
   7.99,
   'https://arcaplanet.vtexassets.com/arquivos/ids/270578/brekkies-cat-bonta-benessere-urinary-care-1-5-kg.jpg?v=637849996178730000',
@@ -69,6 +75,8 @@ $food_cat->set_is_gluten_free('Sì');
 // ALL products array
 $products = [$food_dog, $toy_cat, $kennel_cat, $toy_dog, $kennel_dog, $food_cat];
 
+
+var_dump($products);
 
 ?>
 
@@ -105,6 +113,7 @@ $products = [$food_dog, $toy_cat, $kennel_cat, $toy_dog, $kennel_dog, $food_cat]
         <?php foreach ($products as $product) : ?>
           <div class="col-4">
             <div class="card" style="width: 18rem;">
+              <span>id: <?php echo $product->get_id() ?></span>
               <img src="<?php echo $product->get_immagine() ?>" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $product->get_item(); ?></h5>

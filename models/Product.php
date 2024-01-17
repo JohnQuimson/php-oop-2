@@ -1,7 +1,13 @@
 <?php
 
+require_once __DIR__ . '/../traits/Id.php';
+
 class Product
 {
+
+  // invoco il trait
+  use Id;
+
   private $item;
   private $prezzo;
   private $immagine;
@@ -9,8 +15,11 @@ class Product
   private $category;
 
 
-  function __construct($_item, $_prezzo, $_immagine, $_dettagli, Category $_category)
+  function __construct($_id, $_item, $_prezzo, $_immagine, $_dettagli, Category $_category)
   {
+
+    $this->set_id($_id);
+
     $this->set_item($_item);
     $this->set_prezzo($_prezzo);
     $this->set_immagine($_immagine);
